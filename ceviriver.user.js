@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name            CeviriVer
+// @name            Ceviriver
 // @description     Translates websites with translation received from remote sources.
 // @description:tr  Uzaktaki kaynaklardan alinan tercumelerle web sitelerini cevirir.
 // @author          Omer Ozarslan <code@ozarslan.com>
@@ -13,9 +13,9 @@
 // @grant           GM.setValue
 // @grant           unsafeWindow
 //
-// @require         CeviriVer.js
-// @require         CeviriVerDevel.js
-// @version         1.0.4
+// @require         Ceviriver.js
+// @require         CeviriverDevel.js
+// @version         1.0.5
 // ==/UserScript==
 
 (function() {
@@ -43,9 +43,9 @@
     /* Prints error message and returns error. Useful for throwing it agian. */
     error(msg, error) {
       if (msg === undefined) {
-        msg = "[CeviriVer][No error message]";
+        msg = "[Ceviriver][No error message]";
       } else {
-        msg = "[CeviriVer] " + msg;
+        msg = "[Ceviriver] " + msg;
       }
       if (error !== undefined) {
         msg += ": " + error;
@@ -64,7 +64,7 @@
   /* Create debug information object, and pass it to unsafe window to access
    * from Web Console. */
   const debugInfo = new DebugInfo();
-  unsafeWindow.CeviriVer = debugInfo;
+  unsafeWindow.Ceviriver = debugInfo;
 
   /* Application queries development mode. Then, it is bootstrapped. */
   GM.getValue(DEVEL_MODE_KEY, false)
@@ -75,10 +75,10 @@
 
         try {
           if (devMode) {
-            debugInfo.log("Starting CeviriVer in development mode.");
-            app = new CeviriVerDevel();
+            debugInfo.log("Starting Ceviriver in development mode.");
+            app = new CeviriverDevel();
           } else {
-            app = new CeviriVer();
+            app = new Ceviriver();
           }
         } catch(error) {
           throw debugInfo.error("Couldn't create object", error);
@@ -88,7 +88,7 @@
           app.run();
         } catch(error) {
           throw debugInfo.error(
-            "Unhandled exception in CeviriVer application", error
+            "Unhandled exception in Ceviriver application", error
           );
         }
       },
