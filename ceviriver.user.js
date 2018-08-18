@@ -6,8 +6,6 @@
 // @namespace       https://github.com/ozars/ceviriver
 // @downloadURL     https://raw.github.com/ozars/ceviriver/master/ceviriver.user.js
 // @updateURL       https://raw.github.com/ozars/ceviriver/master/ceviriver.user.js
-// @license         Apache-2.0 https://www.apache.org/licenses/LICENSE-2.0
-// @copyright       Copyright (C) 2018, by Omer Ozarslan <code@ozarslan.com>
 //
 // @include         https://*.freecodecamp.org/*
 // @include         https://freecodecamp.org/*
@@ -17,7 +15,7 @@
 //
 // @require         CeviriVer.js
 // @require         CeviriVerDevel.js
-// @version         1.0.2
+// @version         1.0.3
 // ==/UserScript==
 
 (function() {
@@ -45,7 +43,9 @@
     /* Prints error message and returns error. Useful for throwing it agian. */
     error(msg, error) {
       if (msg === undefined) {
-        msg = "[No error message]";
+        msg = "[CeviriVer][No error message]";
+      } else {
+        msg = "[CeviriVer] " + msg;
       }
       if (error !== undefined) {
         msg += ": " + error;
