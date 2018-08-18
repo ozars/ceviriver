@@ -15,7 +15,7 @@
 //
 // @require         CeviriVer.js
 // @require         CeviriVerDevel.js
-// @version         1.0.3
+// @version         1.0.4
 // ==/UserScript==
 
 (function() {
@@ -51,6 +51,7 @@
         msg += ": " + error;
       }
       console.error(msg);
+      this.errorStack.push(error);
       return error;
     }
 
