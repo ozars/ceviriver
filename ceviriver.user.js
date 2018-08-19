@@ -9,13 +9,17 @@
 //
 // @include         https://*.freecodecamp.org/*
 // @include         https://freecodecamp.org/*
+// @connect         https://github.com/
+// @connect         https://raw.githubusercontent.com/
 // @grant           GM.getValue
 // @grant           GM.setValue
+// @grant           GM.xmlHttpRequest
 // @grant           unsafeWindow
 //
+// @require         CeviriverUtility.js
 // @require         Ceviriver.js
 // @require         CeviriverDevel.js
-// @version         1.0.5
+// @version         1.0.6
 // ==/UserScript==
 
 (function() {
