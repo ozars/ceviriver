@@ -1,4 +1,5 @@
-'use strict';
+/* Import is used for silencing lint. */
+import { AjaxRequest, DebugInfo } from "CeviriverUtility.js";
 
 class Ceviriver {
   constructor() {
@@ -27,12 +28,12 @@ class Ceviriver {
   }
 
   fetchTranslations() {
-    return CeviriverUtility.getJSON(buildTranslationPath);
+    return AjaxRequest.getJSON(Ceviriver.buildTranslationPath());
   }
 
   run() {
     let translations = this.fetchTranslations();
-    debugInfo.log(translations);
+    DebugInfo.log(translations);
   }
 
 }
