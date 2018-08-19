@@ -18,12 +18,12 @@ class Ceviriver {
   }
 
   buildTranslationPath() {
-    let host = this.host;
-    if (host[host.length - 1] == '/') {
-      host += "index";
+    let path = this.path;
+    if (path[path.length - 1] == '/') {
+      path += "index";
     }
-    host += ".json";
-    return this.repo + this.host + host;
+    path += ".json";
+    return this.repo + this.host + path;
   }
 
   fetchTranslations() {
