@@ -20,13 +20,10 @@
 // @require         CeviriverUtility.js
 // @require         Ceviriver.js
 // @require         CeviriverDevel.js
-// @version         1.0.7
+// @version         1.0.8
 // ==/UserScript==
 
-/* Import is used for silencing lint. */
-import { DebugInfo } from "CeviriverUtility.js";
-import { Ceviriver } from "Ceviriver.js";
-import { CeviriverDevel } from "CeviriverDevel.js";
+/* global DebugInfo, Ceviriver, CeviriverDevel */
 
 (function() {
   'use strict';

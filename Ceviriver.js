@@ -1,5 +1,4 @@
-/* Import is used for silencing lint. */
-import { AjaxRequest, DebugInfo } from "CeviriverUtility.js";
+/* global AjaxRequest, DebugInfo */
 
 class Ceviriver {
   constructor() {
