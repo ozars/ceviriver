@@ -55,4 +55,4 @@ class _DebugInfo {
 }
 
 /* Singleton for debug information. */
-const DebugInfo = _DebugInfo();
+const DebugInfo = new _DebugInfo();
