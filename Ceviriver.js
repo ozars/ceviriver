@@ -27,7 +27,7 @@ class Ceviriver {
   }
 
   fetchTranslations() {
-    return AjaxRequest.getJSON(Ceviriver.buildTranslationPath());
+    return AjaxRequest.getJSON(this.buildTranslationPath());
   }
 
   run() {
