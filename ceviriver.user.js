@@ -9,7 +9,7 @@
 //
 // @include         https://*.freecodecamp.org/*
 // @include         https://freecodecamp.org/*
-// @connect         https://github.com/
+// @connect         https://raw.github.com/
 // @connect         https://raw.githubusercontent.com/
 // @grant           GM.getValue
 // @grant           GM.setValue
